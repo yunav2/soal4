@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <title>Welcome to Pendaftaran Karyawan</title>
+</head>
+<body>
+    <div class="logo">
+        <a href="#"><h1>Project<span>Hawqi</span></h1></a>
+    </div>
+    <div class="container">
+        <h1>Pendaftaran Karyawan</h1>
+        <div class="form">
+            <form action="{{ url_for('registrasi_karyawan') }}" method="post" enctype="multipart/form-data">
+                <input type="nama" placeholder="Masukkan Nama Karyawan" name="nama" required>
+                <input type="email" placeholder="Masukkan Email Karyawan" name="email" required>
+                <input type="nohp" placeholder="Masukkan No. Handphone karyawan" name="no_telp" required>
+                <input type="divisi" placeholder="Masukkan Divisi" name="divisi" required>
+                <input type="jabatan" placeholder="Masukkan Jabatan" name="jabatan" required>
+                <input type="gaji" placeholder="Masukkan Gaji" name="gaji" required>
+                <input type="jam" placeholder="Masukkan Jam Kerja" name="jam" required>
+                <input type="kode" placeholder="Masukkan Kode" name="kode" required>
+            <button type="submit">Submit</button>
+            </form>
+            <div class="back">
+                <button type="submit"><a href="{{ url_for('landingpage') }}">Back</a></button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+          </div>
+
+          <div class="credit">
+            <p>Created by <a href="">Projecthawqi</a>. | &copy; 2024.</p>
+          </div>
+    </footer>
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

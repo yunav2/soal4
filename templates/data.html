@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='data.css') }}">
+    <title>Data Karyawan</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h1>Data Karyawan</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>No.Telp</th>
+                    <th>Divisi</th>
+                    <th>Jabatan</th>
+                    <th>Gaji</th>
+                    <th>Jam</th>
+                    <th>Kode</th>
+                </tr>
+                <tbody>
+                    {% for data in data %}
+                    <tr>
+                        <td>{{ data[0] }}</td>
+                        <td>{{ data[1] }}</td>
+                        <td>{{ data[2] }}</td>
+                        <td>{{ data[3] }}</td>
+                        <td>{{ data[4] }}</td>
+                        <td>{{ data[5] }}</td>
+                        <td>{{ data[6] }}</td>
+                        <td>{{ data[7] }}</td>
+                        <td>{{ data[8] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </thead>
+        </table>
+        <button><a href="{{ url_for('landingpage') }}" class="back-button">Back</a></button>
+        </div>
+    </div>
+</body>
+</html>
